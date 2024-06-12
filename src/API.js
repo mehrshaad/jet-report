@@ -33,7 +33,7 @@ const urls = {
 }
 export async function getRequest(element, date, pdate) {
     return await axios({
-        url: `http://jet.tipax.ir:200/odata/Tipax/ReportArgs/Tipax.${element}(mdate='${date}',branchid=00000000-0000-0000-0000-000000000000)`,
+        url: `http://jet.tipax.ir:200/odata/Tipax/ReportArgs/Tipax.${element}(mdate='${date}',branchid=00000000-0000-0000-0000-000000000000)/`,
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
