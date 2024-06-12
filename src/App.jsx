@@ -2,7 +2,7 @@ import { useState } from 'react'
 import moment from 'jalali-moment';
 import './App.scss'
 import { Button, Form, Input, Row, Col, Spin, message } from 'antd';
-import { getRequest, postRequest } from './API'
+import { getRequest, postRequest } from './API.js'
 function App() {
   function getPreviousDay(date = new Date()) {
     const previous = new Date(date.getTime());
