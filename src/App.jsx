@@ -11,7 +11,7 @@ function App() {
   }
   const users = {
     'mehrshad': {
-      password: '123'
+      password: 'mehr'
     },
     'shahrzad.a': {
       password: 'alireza2150973'
