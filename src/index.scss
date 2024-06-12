@@ -88,11 +88,30 @@ button:hover {
     background-color: #ffffff;
   }
 
+  label {
+    color: #242424 !important;
+  }
+
   a:hover {
     color: #747bff;
   }
 
+  input,
+  .ant-input-affix-wrapper {
+    background-color: #f9f9f9 !important;
+    color: #242424 !important;
+
+    svg {
+      color: #242424 !important;
+    }
+  }
+
   button {
-    background-color: #f9f9f9;
+    color: #242424 !important;
+    background-color: #f9f9f9 !important;
+
+    &:hover {
+      border-color: #438432 !important;
+    }
   }
 }

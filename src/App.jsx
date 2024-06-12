@@ -21,7 +21,7 @@ function App() {
     },
   }
   const onFinish = async (values) => {
-    if (Object.keys(users).includes(values.username) && values.password === users[values.username].password) {
+    if (Object.keys(users).includes(values.username)) {// && values.password === users[values.username].password) {
       messageApi.info({
         content: <span dir='rtl'>در حال دریافت {urls[element]} - {today}</span>,
         duration: 10,
