@@ -140,6 +140,11 @@ function App() {
                 >
                   <Input.Password size='large' placeholder='Password' />
                 </Form.Item>
+                <Form.Item>
+                  <Button size='large' className='all' onClick={() => setElement('all')} htmlType='submit'>
+                    دریافت همه گزارشات
+                  </Button>
+                </Form.Item>
               </Space>
             </Col>
             <Col span={12}>
@@ -158,8 +163,6 @@ function App() {
             </Col>
           </Row>
           <Row gutter={[24, 0]}>
-          </Row>
-          <Row gutter={[24, 0]}>
             {Object.keys(urls).map((key) =>
             (
               <Col span={12}>
@@ -170,13 +173,6 @@ function App() {
                 </Form.Item>
               </Col>
             ))}
-            <Col span={12}>
-              <Form.Item>
-                <Button size='large' onClick={() => setElement('all')} htmlType='submit'>
-                  دریافت همه گزارشات
-                </Button>
-              </Form.Item>
-            </Col>
           </Row>
         </Form>
       </div>

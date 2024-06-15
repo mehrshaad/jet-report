@@ -61,6 +61,11 @@ button {
   background-color: #1a1a1a !important;
   cursor: pointer;
   transition: border-color 0.25s;
+
+  &.all {
+    background-color: #5D944F !important;
+    color: black !important;
+  }
 }
 
 .ant-spin-fullscreen {
@@ -110,10 +115,16 @@ button:hover {
     color: #242424 !important;
     background-color: #f9f9f9 !important;
 
+    &.all {
+      background-color: #438432 !important;
+      color: #f9f9f9 !important;
+    }
+
     &:hover {
       border-color: #438432 !important;
     }
   }
+
   .datePicker {
     width: 100%;
     padding: none;
@@ -149,9 +160,11 @@ button:hover {
     .day-item-chain,
     .day-item-outer,
     .day {
+      color: #1a1a1a;
       border-radius: 10px;
 
       &.highlight {
+        color: white;
         background-color: #438432;
       }
 
