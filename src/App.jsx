@@ -110,9 +110,10 @@ function App() {
             <Col span={12}>
               <Space
                 direction="vertical"
-                size="middle"
+                size='large'
                 style={{
                   display: 'flex',
+                  height: '100%',
                 }}
               >
                 <Form.Item
@@ -127,20 +128,18 @@ function App() {
                 >
                   <Input size='large' placeholder='Username' />
                 </Form.Item>
-                {/* <Col span={12}> */}
-                  <Form.Item
-                    label="Password"
-                    name="password"
-                    rules={[
-                      {
-                        required: true,
-                        message: ''
-                      },
-                    ]}
-                  >
-                    <Input.Password size='large' placeholder='Password' />
-                  </Form.Item>
-                {/* </Col> */}
+                <Form.Item
+                  label="Password"
+                  name="password"
+                  rules={[
+                    {
+                      required: true,
+                      message: ''
+                    },
+                  ]}
+                >
+                  <Input.Password size='large' placeholder='Password' />
+                </Form.Item>
               </Space>
             </Col>
             <Col span={12}>
