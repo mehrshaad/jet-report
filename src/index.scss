@@ -114,4 +114,51 @@ button:hover {
       border-color: #438432 !important;
     }
   }
+  .datePicker {
+    width: 100%;
+    padding: none;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: none;
+
+    .day-label-bar-inner-rtl {
+      border-radius: 10px;
+      background-color: #438432;
+    }
+
+    .panel-header-rtl {
+      max-width: 1000px;
+      background-color: #e1e1e1;
+
+      .panel-header-inner {
+        color: rgb(238, 238, 238) !important;
+      }
+    }
+
+    .days-body,
+    .panel-footer-rtl {
+      background-color: #dedede00;
+      border-radius: 10px;
+    }
+
+    .panel-footer-rtl {
+      border-radius: 10px;
+      display: none;
+    }
+
+    .day-item-chain,
+    .day-item-outer,
+    .day {
+      border-radius: 10px;
+
+      &.highlight {
+        background-color: #438432;
+      }
+
+      &.disabled {
+        border-radius: 0px;
+        background-color: #f9f9f9;
+      }
+    }
+  }
 }
