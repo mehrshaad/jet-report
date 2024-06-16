@@ -41,7 +41,6 @@ export async function getRequest(element, date, pdate) {
         },
         withCredentials: true,
     }).then(res => {
-        console.log('Ok!')
         handleDownloadExcel2(res.data.value, element, pdate)
         return true;
     }).catch(err => {

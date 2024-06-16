@@ -40,7 +40,6 @@ function App() {
       // all reports
       if (element === 'all') {
         setLoading(true)
-        console.log(1)
         await Promise.all(Object.keys(urls).slice(0, -1).map(async (key) => {
           if (await getRequest(key, mdate, today))
             messageApi.success({
@@ -51,7 +50,6 @@ function App() {
               content: <span dir='rtl'>دریافت {urls[key]} - {today} با خطا مواجه شد</span>,
             });
         }))
-        console.log(2)
         setLoading(false)
       }
       // specific reports
@@ -87,6 +85,7 @@ function App() {
     'GetFinActEkhtetamReportData': 'گزارش روزانه اختتام',
     'GetFinActReturnReportData': 'گزارش روزانه عودتی',
     'GetFinActCODReportData': 'گزارش روزانه COD',
+    'all': 'همه گزارشات'
   }
   return (
     <>
@@ -141,7 +140,7 @@ function App() {
                   <Input.Password size='large' placeholder='Password' />
                 </Form.Item>
                 <Form.Item>
-                  <Button size='large' className='all' onClick={() => setElement('all')} htmlType='submit'>
+                  <Button loading={loading && 'all' === element} size='large' className='all' onClick={() => setElement('all')} htmlType='submit'>
                     دریافت همه گزارشات
                   </Button>
                 </Form.Item>
@@ -163,7 +162,7 @@ function App() {
             </Col>
           </Row>
           <Row gutter={[24, 0]}>
-            {Object.keys(urls).map((key) =>
+            {Object.keys(urls).slice(0, -1).map((key) =>
             (
               <Col span={12}>
                 <Form.Item>
