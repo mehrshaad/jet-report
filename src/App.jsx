@@ -21,18 +21,12 @@ function App() {
     return moment(date).locale('fa').format('YYYY-MM-DD')
   }
   const users = {
-    'mehrshad': {
-      password: 'mehr'
-    },
-    'shahrzad.a': {
-      password: 'alireza2150973'
-    },
     'admin': {
       password: 'admin'
     },
   }
   const onFinish = async (values) => {
-    if (Object.keys(users).includes(values.username)) {// && values.password === users[values.username].password) {
+    if (Object.keys(users).includes(values.username) && values.password === users[values.username].password) {
       messageApi.info({
         content: <span dir='rtl'>در حال دریافت {urls[element]} - {today}</span>,
         duration: 10,
